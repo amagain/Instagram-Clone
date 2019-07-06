@@ -29,10 +29,15 @@ class FeedTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         return stories.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoryCollectionViewCell", for: indexPath) as? StoryCollectionViewCell else {
+            fatalError("StoryCollectionViewCell not found")
+        }
+        cell.storyImage.image = stories[indexPath.row].post.postImage
+        cell.userNameLabel.text = stories[indexPath.row].post.user.name
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 90.0, height: 90.0)
+        return CGSize(width: 90.0, height: 110.0)
     }
 }

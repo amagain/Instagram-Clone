@@ -13,12 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-      
+        
         setupTabBarController()
         return true
     }
     
-   private func setupTabBarController() {
+    private func setupTabBarController() {
         //Combining Storyboards in a tab bar controller
         let tabBarController = UITabBarController()
         let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
@@ -30,19 +30,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "Home") as?HomeViewController,
             let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "Search") as? SearchViewController,
             let  newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as? NewPostViewController,
-            let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController,
-            let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as? ActivityViewController
+            let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as? ActivityViewController,
+            let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
             else {
                 fatalError("VC not found")
         }
-    
+        
         let vcData: [(UIViewController, UIImage, UIImage)] =
             [
-            (homeVC, UIImage(named: "home_tab_icon")!, UIImage(named: "home_selected_tab_icon")!),
-            (searchVC, UIImage(named: "search_tab_icon")!, UIImage(named: "search_selected_tab_icon")!),
-            (newPostVC, UIImage(named: "post_tab_icon")!, UIImage(named: "post_tab_icon")!),
-            (profileVC, UIImage(named: "profile_tab_icon")!, UIImage(named: "profile_selected_tab_icon")!),
-            (activityVC, UIImage(named: "activity_tab_icon")!, UIImage(named: "activity_selected_tab_icon")!),
+                (homeVC, UIImage(named: "home_tab_icon")!, UIImage(named: "home_selected_tab_icon")!),
+                (searchVC, UIImage(named: "search_tab_icon")!, UIImage(named: "search_selected_tab_icon")!),
+                (newPostVC, UIImage(named: "post_tab_icon")!, UIImage(named: "post_tab_icon")!),
+                (activityVC, UIImage(named: "activity_tab_icon")!, UIImage(named: "activity_selected_tab_icon")!),
+                (profileVC, UIImage(named: "profile_tab_icon")!, UIImage(named: "profile_selected_tab_icon")!)
         ]
         
         let viewControllers = vcData.map { (vc, defaultImage, selectedImage) -> UINavigationController in

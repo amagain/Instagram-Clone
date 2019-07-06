@@ -19,6 +19,8 @@
 		CE042AF722D09B8D00689830 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AF622D09B8D00689830 /* ActivityViewController.swift */; };
 		CE042AFD22D0C81500689830 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AFB22D0C81500689830 /* FeedTableViewCell.swift */; };
 		CE042AFE22D0C81500689830 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE042AFC22D0C81500689830 /* FeedTableViewCell.xib */; };
+		CE042B0122D0CB9600689830 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AFF22D0CB9600689830 /* StoryCollectionViewCell.swift */; };
+		CE042B0222D0CB9600689830 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE042B0022D0CB9600689830 /* StoryCollectionViewCell.xib */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -43,6 +45,8 @@
 		CE042AF622D09B8D00689830 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		CE042AFB22D0C81500689830 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		CE042AFC22D0C81500689830 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		CE042AFF22D0CB9600689830 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE042B0022D0CB9600689830 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			children = (
 				CE042AFB22D0C81500689830 /* FeedTableViewCell.swift */,
 				CE042AFC22D0C81500689830 /* FeedTableViewCell.xib */,
+				CE042AFF22D0CB9600689830 /* StoryCollectionViewCell.swift */,
+				CE042B0022D0CB9600689830 /* StoryCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 				CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */,
 				CE042AE422D09AD100689830 /* Home.storyboard in Resources */,
 				E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */,
+				CE042B0222D0CB9600689830 /* StoryCollectionViewCell.xib in Resources */,
 				CE042AEC22D09AFD00689830 /* Activity.storyboard in Resources */,
 				CE042AFE22D0C81500689830 /* FeedTableViewCell.xib in Resources */,
 				CE042AE622D09ADE00689830 /* Search.storyboard in Resources */,
@@ -248,6 +255,7 @@
 				E147A0852159176200AD9178 /* AppDelegate.swift in Sources */,
 				E147A09B215917EB00AD9178 /* FeedData.swift in Sources */,
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
+				CE042B0122D0CB9600689830 /* StoryCollectionViewCell.swift in Sources */,
 				CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
