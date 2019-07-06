@@ -106,9 +106,9 @@
 		E147A0832159176200AD9178 /* InstagramApp */ = {
 			isa = PBXGroup;
 			children = (
+				E147A0842159176200AD9178 /* AppDelegate.swift */,
 				CE042AED22D09B5500689830 /* ViewControllers */,
 				CE042AE222D09AB900689830 /* Storybaords */,
-				E147A0842159176200AD9178 /* AppDelegate.swift */,
 				E1D28C3021629A1300DB621F /* Library */,
 				E1D74798215FC8BF007A3584 /* Data */,
 				E147A08D2159176400AD9178 /* LaunchScreen.storyboard */,

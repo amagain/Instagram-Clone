@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Activity View Controller-->
         <scene sceneID="myO-2z-bL2">
             <objects>
-                <viewController storyboardIdentifier="Activity" id="dbO-gc-SCr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Activity" id="dbO-gc-SCr" customClass="ActivityViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aKQ-I1-L1u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
