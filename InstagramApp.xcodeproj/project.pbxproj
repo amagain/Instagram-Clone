@@ -17,6 +17,8 @@
 		CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AF222D09B7B00689830 /* NewPostViewController.swift */; };
 		CE042AF522D09B8400689830 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AF422D09B8400689830 /* ProfileViewController.swift */; };
 		CE042AF722D09B8D00689830 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AF622D09B8D00689830 /* ActivityViewController.swift */; };
+		CE042AFD22D0C81500689830 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042AFB22D0C81500689830 /* FeedTableViewCell.swift */; };
+		CE042AFE22D0C81500689830 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE042AFC22D0C81500689830 /* FeedTableViewCell.xib */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -39,6 +41,8 @@
 		CE042AF222D09B7B00689830 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		CE042AF422D09B8400689830 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		CE042AF622D09B8D00689830 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		CE042AFB22D0C81500689830 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		CE042AFC22D0C81500689830 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		CE042AF822D0C7CE00689830 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE042AFB22D0C81500689830 /* FeedTableViewCell.swift */,
+				CE042AFC22D0C81500689830 /* FeedTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		E147A0782159176200AD9178 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		E147A0832159176200AD9178 /* InstagramApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE042AF822D0C7CE00689830 /* Views */,
 				E147A0842159176200AD9178 /* AppDelegate.swift */,
 				CE042AED22D09B5500689830 /* ViewControllers */,
 				CE042AE222D09AB900689830 /* Storybaords */,
@@ -209,6 +223,7 @@
 				CE042AE422D09AD100689830 /* Home.storyboard in Resources */,
 				E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */,
 				CE042AEC22D09AFD00689830 /* Activity.storyboard in Resources */,
+				CE042AFE22D0C81500689830 /* FeedTableViewCell.xib in Resources */,
 				CE042AE622D09ADE00689830 /* Search.storyboard in Resources */,
 				E147A08C2159176300AD9178 /* Assets.xcassets in Resources */,
 			);
@@ -226,6 +241,7 @@
 				E1D28C3521629B5000DB621F /* SimpleCameraView.swift in Sources */,
 				CE042AF122D09B6F00689830 /* SearchViewController.swift in Sources */,
 				CE042AEF22D09B6500689830 /* HomeViewController.swift in Sources */,
+				CE042AFD22D0C81500689830 /* FeedTableViewCell.swift in Sources */,
 				E1E440B22163ED050034FD40 /* ActivityData.swift in Sources */,
 				CE042AF522D09B8400689830 /* ProfileViewController.swift in Sources */,
 				CE042AF722D09B8D00689830 /* ActivityViewController.swift in Sources */,
