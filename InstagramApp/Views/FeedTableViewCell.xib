@@ -140,6 +140,15 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentCountButton" destination="qkO-vV-ZDf" id="vkL-Fw-PZO"/>
+                <outlet property="dateLabel" destination="WHa-RZ-Erd" id="J6q-C6-Po7"/>
+                <outlet property="likesCountLabel" destination="AHB-k4-HZ9" id="jnT-AN-kHR"/>
+                <outlet property="postCommentLabel" destination="GzE-nV-0QV" id="Y8e-9G-tAB"/>
+                <outlet property="postImage" destination="WZl-Gl-dUh" id="SBr-r9-frW"/>
+                <outlet property="profileImage" destination="yni-1X-fYR" id="INd-VY-Rg4"/>
+                <outlet property="usernameTItleButton" destination="03s-nK-fij" id="pTi-ft-FEc"/>
+            </connections>
             <point key="canvasLocation" x="47.10144927536232" y="35.15625"/>
         </tableViewCell>
     </objects>
