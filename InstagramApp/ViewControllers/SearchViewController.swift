@@ -1,30 +1,36 @@
-//
-//  SearchViewController.swift
-//  InstagramApp
-//
-//  Created by User on 6/7/19.
-//  Copyright © 2019 Gwinyai Nyatsoka. All rights reserved.
-//
-
 import UIKit
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var reuseIdentifier = "ExploreCollectionViewCell"
+   
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
     }
     
+    
+    
+    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SearchViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
     }
-    */
-
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+}
+extension SearchViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
 }

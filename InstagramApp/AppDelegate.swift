@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  InstagramApp
-//
-//
-
 import UIKit
 
 @UIApplicationMain
