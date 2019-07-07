@@ -19,6 +19,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         storyImage.layer.masksToBounds = true
         storyImage.layer.borderColor = UIColor.white.cgColor
         storyImage.layer.borderWidth = CGFloat(3.0)
+        storyImage.contentMode = .scaleAspectFill
     }
 
 }

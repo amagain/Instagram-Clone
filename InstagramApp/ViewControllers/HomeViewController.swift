@@ -42,21 +42,38 @@ class HomeViewController: UIViewController {
         let profileImageView = UIImageView(image: UIImage(named: "logo_nav_icon"))
         self.navigationItem.titleView = profileImageView
     }
-    
-    
-    
-    
-    
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return posts.count + 1
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        if indexPath.row == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell") as? StoriesTableViewCell {
+                return cell
+            }
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
+        let currentIndex = indexPath.row - 1
+        let postData = posts[currentIndex]
+        cell.profileImage.image = postData.user.profileImage
+        cell.postImage.image = postData.postImage
+        cell.dateLabel.text = postData.datePosted
+        cell.likesCountLabel.text = "\(postData.likesCount) likes"
+        cell.postCommentLabel.text = postData.postComment
+        cell.usernameTItleButton.setTitle(postData.user.name, for: .normal)
+        cell.commentCountButton.setTitle("View all \(postData.commentCount) comments", for: .normal)
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }

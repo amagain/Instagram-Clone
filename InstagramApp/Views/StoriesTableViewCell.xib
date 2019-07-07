@@ -15,17 +15,17 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoriesTableViewCell" rowHeight="125" id="KGk-i7-Jjw" customClass="StoriesTableViewCell" customModule="InstagramApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="499" height="125"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="499" height="124.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="jIA-Th-bxC">
-                        <rect key="frame" x="0.0" y="0.0" width="499" height="125.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="frame" x="0.0" y="0.0" width="499" height="127"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="125" id="tpN-Sk-idr"/>
+                            <constraint firstAttribute="height" constant="127" id="tpN-Sk-idr"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TSL-vX-pgK">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="TSL-vX-pgK">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -36,11 +36,15 @@
                 <constraints>
                     <constraint firstItem="jIA-Th-bxC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0uc-Aj-xaw"/>
                     <constraint firstItem="jIA-Th-bxC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DdI-6G-VYK"/>
-                    <constraint firstAttribute="bottom" secondItem="jIA-Th-bxC" secondAttribute="bottom" id="FLE-W1-Bd8"/>
+                    <constraint firstAttribute="bottom" secondItem="jIA-Th-bxC" secondAttribute="bottom" constant="-2.5" id="FLE-W1-Bd8"/>
+                    <constraint firstAttribute="bottom" secondItem="jIA-Th-bxC" secondAttribute="bottom" constant="-2.5" id="udJ-0f-IfZ"/>
                     <constraint firstAttribute="trailing" secondItem="jIA-Th-bxC" secondAttribute="trailing" id="vra-9b-Hvd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="collectionView" destination="jIA-Th-bxC" id="o0X-Ow-irq"/>
+            </connections>
             <point key="canvasLocation" x="267.39130434782612" y="169.08482142857142"/>
         </tableViewCell>
     </objects>
