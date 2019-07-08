@@ -1,23 +1,22 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     var reuseIdentifier = "ExploreCollectionViewCell"
-   
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
     }
     
-    
-    
-    
-
 }
 
 extension SearchViewController: UICollectionViewDataSource {

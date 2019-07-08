@@ -24,6 +24,7 @@
 		CE042B0522D1E29B00689830 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0322D1E29B00689830 /* FeedTableViewCell.swift */; };
 		CE042B0622D1E29B00689830 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE042B0422D1E29B00689830 /* FeedTableViewCell.xib */; };
 		CE042B0822D21B5A00689830 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */; };
+		CE042B0A22D314D600689830 /* SearchBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0922D314D600689830 /* SearchBarContainerView.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 		CE042B0322D1E29B00689830 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		CE042B0422D1E29B00689830 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE042B0922D314D600689830 /* SearchBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerView.swift; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				CE042B0322D1E29B00689830 /* FeedTableViewCell.swift */,
 				CE042B0422D1E29B00689830 /* FeedTableViewCell.xib */,
 				CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */,
+				CE042B0922D314D600689830 /* SearchBarContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				E1E440B42163F16E0034FD40 /* UserData.swift in Sources */,
 				E1D28C3721629B5700DB621F /* SimpleCamera.swift in Sources */,
 				CE042B0522D1E29B00689830 /* FeedTableViewCell.swift in Sources */,
+				CE042B0A22D314D600689830 /* SearchBarContainerView.swift in Sources */,
 				E1D28C3521629B5000DB621F /* SimpleCameraView.swift in Sources */,
 				CE042AF122D09B6F00689830 /* SearchViewController.swift in Sources */,
 				CE042AEF22D09B6500689830 /* HomeViewController.swift in Sources */,
