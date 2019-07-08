@@ -25,6 +25,7 @@
 		CE042B0622D1E29B00689830 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE042B0422D1E29B00689830 /* FeedTableViewCell.xib */; };
 		CE042B0822D21B5A00689830 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */; };
 		CE042B0A22D314D600689830 /* SearchBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0922D314D600689830 /* SearchBarContainerView.swift */; };
+		CE042B0C22D3430E00689830 /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0B22D3430E00689830 /* CollectionLayout.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		CE042B0422D1E29B00689830 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE042B0922D314D600689830 /* SearchBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerView.swift; sourceTree = "<group>"; };
+		CE042B0B22D3430E00689830 /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				E147A08D2159176400AD9178 /* LaunchScreen.storyboard */,
 				E147A0902159176400AD9178 /* Info.plist */,
 				E147A08B2159176300AD9178 /* Assets.xcassets */,
+				CE042B0B22D3430E00689830 /* CollectionLayout.swift */,
 			);
 			path = InstagramApp;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				TargetAttributes = {
 					E147A0802159176200AD9178 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -263,6 +267,7 @@
 				CE042B0A22D314D600689830 /* SearchBarContainerView.swift in Sources */,
 				E1D28C3521629B5000DB621F /* SimpleCameraView.swift in Sources */,
 				CE042AF122D09B6F00689830 /* SearchViewController.swift in Sources */,
+				CE042B0C22D3430E00689830 /* CollectionLayout.swift in Sources */,
 				CE042AEF22D09B6500689830 /* HomeViewController.swift in Sources */,
 				CE042AFD22D0C81500689830 /* StoriesTableViewCell.swift in Sources */,
 				E1E440B22163ED050034FD40 /* ActivityData.swift in Sources */,
@@ -420,7 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.InstagramApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -439,7 +444,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.InstagramApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
