@@ -17,7 +17,6 @@ class HomeViewController: UIViewController {
         
         tableView.estimatedRowHeight = 88.0
         tableView.rowHeight = UITableView.automaticDimension
-        
         tableView.delegate = self
         tableView.dataSource = self
         

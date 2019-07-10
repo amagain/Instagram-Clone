@@ -139,6 +139,7 @@
 		E147A0832159176200AD9178 /* InstagramApp */ = {
 			isa = PBXGroup;
 			children = (
+				CE042B0B22D3430E00689830 /* CollectionLayout.swift */,
 				CE042AF822D0C7CE00689830 /* Views */,
 				E147A0842159176200AD9178 /* AppDelegate.swift */,
 				CE042AED22D09B5500689830 /* ViewControllers */,
@@ -148,7 +149,6 @@
 				E147A08D2159176400AD9178 /* LaunchScreen.storyboard */,
 				E147A0902159176400AD9178 /* Info.plist */,
 				E147A08B2159176300AD9178 /* Assets.xcassets */,
-				CE042B0B22D3430E00689830 /* CollectionLayout.swift */,
 			);
 			path = InstagramApp;
 			sourceTree = "<group>";
