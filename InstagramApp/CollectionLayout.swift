@@ -34,8 +34,7 @@ class CollectionLayout: UICollectionViewLayout {
         let itemsPerRow: Int = 3
         let normalColumnWidth: CGFloat = contentWidth / CGFloat(itemsPerRow)
         let normalColumnHeight: CGFloat = normalColumnWidth
-        
-        let featuredColumnWidth: CGFloat = (normalColumnWidth * 2) + CGFloat((cellPadding))
+        let featuredColumnWidth: CGFloat = (normalColumnWidth * 2) + cellPadding
         let featuredColumnHeight: CGFloat = featuredColumnWidth
         
         var xOffsets: [CGFloat] = [CGFloat]()
@@ -81,7 +80,6 @@ class CollectionLayout: UICollectionViewLayout {
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.frame = frame
             cache.append(attributes)
-            
             contentHeight = max(contentHeight, frame.maxY)
             itemInSection = itemInSection < (numberOfItemsPerSection - 1) ? (itemInSection + 1) : 0
         }

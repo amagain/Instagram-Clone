@@ -3,9 +3,7 @@ import UIKit
 class SearchViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
     var reuseIdentifier = "ExploreCollectionViewCell"
-    
     var searchController: UISearchController!
     
     lazy var posts: [Post] = {
@@ -58,7 +56,3 @@ extension SearchViewController: UICollectionViewDelegate {
         return cell
     }
 }
-
-//extension SearchViewController: UICollectionViewDelegateFlowLayout {
-//
-//}
