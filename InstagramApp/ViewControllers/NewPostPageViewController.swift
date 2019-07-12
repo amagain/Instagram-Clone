@@ -24,9 +24,7 @@ class NewPostPageViewController: UIPageViewController, UIPageViewControllerDeleg
             orderedViewControllers.append(page)
         }
         if let firstViewController = orderedViewControllers.first {
-            
             setViewControllers([firstViewController], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
-            
         }
         NotificationCenter.default.addObserver(self, selector: #selector(NewPostPageViewController.newPage(notification:)), name: NSNotification.Name(rawValue: "newPage"), object: nil)
     }
