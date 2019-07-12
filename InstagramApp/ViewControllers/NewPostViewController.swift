@@ -22,7 +22,6 @@ class NewPostViewController: UIViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonPressed))
-        
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -40,5 +39,4 @@ class NewPostViewController: UIViewController {
     @IBAction func photoButtonTapped(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: NSNotification.Name.RawValue("newPage")), object: NewPostPagesToShow.camera)
     }
-    
 }
