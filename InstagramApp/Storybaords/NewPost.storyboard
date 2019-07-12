@@ -106,7 +106,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="1o6-rC-5OM">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="1o6-rC-5OM" customClass="PhotoCollectionViewCell" customModule="InstagramApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="192" height="193"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -124,6 +124,9 @@
                                             <constraint firstAttribute="bottom" secondItem="prB-Jk-Fwe" secondAttribute="bottom" id="UxP-2r-PDM"/>
                                             <constraint firstAttribute="trailing" secondItem="prB-Jk-Fwe" secondAttribute="trailing" id="oIN-22-FKl"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="prB-Jk-Fwe" id="Mfj-gY-mF2"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
