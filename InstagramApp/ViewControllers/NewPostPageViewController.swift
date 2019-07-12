@@ -17,6 +17,8 @@ class NewPostPageViewController: UIPageViewController, UIPageViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        dataSource = self
+        
         for pageToShow in pagesToShow {
             let page = newViewController(pageToShow: pageToShow)
             orderedViewControllers.append(page)
@@ -56,5 +58,37 @@ class NewPostPageViewController: UIPageViewController, UIPageViewControllerDeleg
             setViewControllers([orderedViewControllers[index]], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
         }
         currentIndex = index
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "newPage"), object: nil)
+    }
+}
+
+extension NewPostPageViewController: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
+            return nil
+        }
+        let previousIndex = viewControllerIndex - 1
+        guard previousIndex >= 0 else {
+            return nil
+        }
+        return orderedViewControllers[previousIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else {
+            return nil
+        }
+        let nextIndex = viewControllerIndex + 1
+        let orderedViewControllersCount = orderedViewControllers.count
+        guard orderedViewControllersCount != nextIndex else {
+            return nil
+        }
+        guard orderedViewControllersCount > nextIndex else {
+            return nil
+        }
+        return orderedViewControllers[nextIndex]
     }
 }
