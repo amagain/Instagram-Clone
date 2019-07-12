@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Post Page View Controller-->
+        <!--New Post View Controller-->
         <scene sceneID="bYi-Tp-POa">
             <objects>
-                <viewController storyboardIdentifier="NewPost" id="NuG-3K-T4C" customClass="NewPostPageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPost" id="NuG-3K-T4C" customClass="NewPostViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sBH-lS-34q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,6 +30,9 @@
                                                 <state key="normal" title="Library">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="libraryButtonTapped:" destination="NuG-3K-T4C" eventType="touchUpInside" id="six-0a-6F1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bw5-jS-ktx">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="65"/>
@@ -37,6 +40,9 @@
                                                 <state key="normal" title="Photo">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="photoButtonTapped:" destination="NuG-3K-T4C" eventType="touchUpInside" id="gbc-r9-IXB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -74,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="189.85507246376812" y="35.491071428571423"/>
         </scene>
-        <!--Page View Controller-->
+        <!--New Post Page View Controller-->
         <scene sceneID="AkW-ag-TkC">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Ypy-BD-aSW" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="Ypy-BD-aSW" customClass="NewPostPageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2t-xN-fFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="949" y="34"/>
