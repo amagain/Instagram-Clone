@@ -17,6 +17,22 @@ class NewPostPageViewController: UIPageViewController, UIPageViewControllerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
+        for pageToShow in pagesToShow {
+            let page = newViewController(pageToShow: pageToShow)
+            orderedViewControllers.append(page)
+        }
+        if let firstViewController = orderedViewControllers.first {
+            
+            setViewControllers([firstViewController], direction: UIPageViewController.NavigationDirection.forward, animated: true, completion: nil)
+            
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(NewPostPageViewController.newPage(notification:)), name: NSNotification.Name(rawValue: "newPage"), object: nil)
+    }
+    
+    @objc func newPage(notification: NSNotification) {
+        if let receivedObject = notification.object as? NewPostPagesToShow {
+            showViewController(index: receivedObject.rawValue)
+        }
     }
     
     private func newViewController(pageToShow: NewPostPagesToShow) -> UIViewController {
