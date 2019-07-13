@@ -30,7 +30,7 @@ class TabBarDelegate: NSObject, UITabBarControllerDelegate {
         
         if controllerIndex == 2 {
             let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
-            let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPostVC") as! NewPostViewController
+            let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
             let navController = UINavigationController(rootViewController: newPostVC)
             _selectedViewController.present(navController, animated: true, completion: nil)
             return false

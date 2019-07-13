@@ -129,6 +129,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="VvR-tO-NTu" id="HIQ-h3-TsP"/>
+                                    <outlet property="delegate" destination="VvR-tO-NTu" id="afC-fG-8Xz"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,6 +144,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="slu-ZI-uYZ"/>
                     </view>
+                    <connections>
+                        <outlet property="photosCollectionView" destination="jXq-7m-HYO" id="BHD-zw-cmS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLk-vc-xfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
