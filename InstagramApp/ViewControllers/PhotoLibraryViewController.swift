@@ -57,7 +57,39 @@ extension PhotoLibraryViewController: UICollectionViewDelegate {
 }
 
 extension PhotoLibraryViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = self.view.frame.width * 0.32
+        let height = self.view.frame.height * 0.179910045
+        return CGSize(width: width, height: height)
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2.5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedAsset = self.images[indexPath.row]
+        PHImageManager.default().requestImage(for: selectedAsset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: nil) { [weak self] image, info in
+            guard let info = info else { return }
+            let isDegradedImage = info["PHImageResultIsDegradedKey"] as! Bool
+            if !isDegradedImage {
+                if let image = image {
+                    print(image)
+                    //Perform selection
+                    self?.dismiss(animated: true, completion: nil)
+                }
+            }
+            
+        }
+    }
 }
 extension PhotoLibraryViewController: UICollectionViewDataSource {
     
