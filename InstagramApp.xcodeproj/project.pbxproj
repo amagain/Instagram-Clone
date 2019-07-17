@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */; };
+		CE01725522DF59B300FD06A2 /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01725322DF59B300FD06A2 /* ActivityTableViewCell.swift */; };
+		CE01725622DF59B300FD06A2 /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE01725422DF59B300FD06A2 /* ActivityTableViewCell.xib */; };
 		CE042AE422D09AD100689830 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE322D09AD100689830 /* Home.storyboard */; };
 		CE042AE622D09ADE00689830 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE522D09ADE00689830 /* Search.storyboard */; };
 		CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE722D09AE800689830 /* NewPost.storyboard */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		CE01725322DF59B300FD06A2 /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		CE01725422DF59B300FD06A2 /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		CE042AE322D09AD100689830 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CE042AE522D09ADE00689830 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		CE042AE722D09AE800689830 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */,
 				CE042B0922D314D600689830 /* SearchBarContainerView.swift */,
 				CEB3C5AE22D89761002859FA /* PhotoCollectionViewCell.swift */,
+				CE01725322DF59B300FD06A2 /* ActivityTableViewCell.swift */,
+				CE01725422DF59B300FD06A2 /* ActivityTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				CE042B0222D0CB9600689830 /* StoryCollectionViewCell.xib in Resources */,
 				CE042AEC22D09AFD00689830 /* Activity.storyboard in Resources */,
 				CE042AFE22D0C81500689830 /* StoriesTableViewCell.xib in Resources */,
+				CE01725622DF59B300FD06A2 /* ActivityTableViewCell.xib in Resources */,
 				CE042AE622D09ADE00689830 /* Search.storyboard in Resources */,
 				E147A08C2159176300AD9178 /* Assets.xcassets in Resources */,
 			);
@@ -300,6 +307,7 @@
 				E147A09B215917EB00AD9178 /* FeedData.swift in Sources */,
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
 				CE042B0122D0CB9600689830 /* StoryCollectionViewCell.swift in Sources */,
+				CE01725522DF59B300FD06A2 /* ActivityTableViewCell.swift in Sources */,
 				CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */,
 				CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */,
 			);
