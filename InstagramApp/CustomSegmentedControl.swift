@@ -48,6 +48,38 @@ class CustomSegmentedControl: UIView {
         selector.backgroundColor = selectorColor
         addSubview(selector)
         
+        let stackView = UIStackView(arrangedSubviews: buttons)
+        stackView.axis = .horizontal
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 0.0
+        addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
+        
     }
     
+    @objc func buttonTapped(button: UIButton) {
+        for (buttonIndex, btn) in buttons.enumerated() {
+            btn.setTitleColor(textColor, for: .normal)
+            if btn == button {
+                selectedSegmentIndex = buttonIndex
+                delegate?.scrollTo(index: selectedSegmentIndex)
+            }
+        }
+    }
+    
+    func updateSegmentedControlSegs(index: Int) {
+        for btn in buttons {
+            btn.setTitleColor(textColor, for: .normal)
+        }
+        let selectorStartPosition = frame.width / CGFloat(buttons.count) * CGFloat(index)
+        UIView.animate(withDuration: 0.3) {
+            self.selector.frame.origin.x = selectorStartPosition
+        }
+        buttons[index].setTitleColor(selectorTextColor, for: .normal)
+    }
 }
