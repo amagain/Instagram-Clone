@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */; };
 		CE042AE422D09AD100689830 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE322D09AD100689830 /* Home.storyboard */; };
 		CE042AE622D09ADE00689830 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE522D09ADE00689830 /* Search.storyboard */; };
 		CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE722D09AE800689830 /* NewPost.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		CE042AE322D09AD100689830 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CE042AE522D09ADE00689830 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		CE042AE722D09AE800689830 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				E147A08D2159176400AD9178 /* LaunchScreen.storyboard */,
 				E147A0902159176400AD9178 /* Info.plist */,
 				E147A08B2159176300AD9178 /* Assets.xcassets */,
+				CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */,
 			);
 			path = InstagramApp;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
 				CE042B0122D0CB9600689830 /* StoryCollectionViewCell.swift in Sources */,
 				CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */,
+				CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
