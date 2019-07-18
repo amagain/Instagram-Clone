@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzj-PL-IIF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzj-PL-IIF" customClass="CustomSegmentedControl" customModule="InstagramApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -41,6 +41,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="74E-A1-iQJ"/>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="fCj-r7-FyW" id="Gn9-FJ-Aju"/>
+                        <outlet property="segmentedControl" destination="kzj-PL-IIF" id="gas-cM-oVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tSL-94-kOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

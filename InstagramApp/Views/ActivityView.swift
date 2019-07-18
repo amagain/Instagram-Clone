@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActivityView: UIViewController {
+class ActivityView: UIView {
     
     @IBOutlet weak var tableView: UITableView!
     var activityData: [Activity] = [Activity]() {
