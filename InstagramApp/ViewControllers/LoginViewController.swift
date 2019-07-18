@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -76,6 +77,41 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonDidTouch(_ sender: Any) {
         
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        let spinner = UIViewController.displayLoading(withView: self.view)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] (user, error) in
+            guard let strongSelf = self else {return}
+            DispatchQueue.main.async {
+                UIViewController.removeLoading(spinner: spinner)
+            }
+            if error == nil {
+                DispatchQueue.main.async {
+                    //login
+                }
+            }
+            else if let error = error {
+                var errorTitle: String = "Login Error"
+                var errorMessage: String = "Problem loggin in"
+                if let errCode = AuthErrorCode(rawValue: error._code) {
+                    switch errCode {
+                    case .wrongPassword:
+                        errorTitle = "Wrong Password"
+                        errorMessage = " The password is wrong"
+                    case .invalidEmail:
+                        errorTitle = "Email invalid"
+                        errorMessage = "Please enter a valid email"
+                    default:
+                        break
+                    }
+                    let alert = Helper.errorAlert(title: errorTitle, message: errorMessage)
+                    DispatchQueue.main.async {
+                        strongSelf.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func dontHaveAccountButtonDidTouch(_ sender: Any) {
