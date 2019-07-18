@@ -17,6 +17,11 @@
 		CE01725E22E0380200FD06A2 /* ProfileViewStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01725D22E0380200FD06A2 /* ProfileViewStyleTableViewCell.swift */; };
 		CE01726022E03D3F00FD06A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE01725F22E03D3F00FD06A2 /* GoogleService-Info.plist */; };
 		CE01726222E0486800FD06A2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01726122E0486800FD06A2 /* Helper.swift */; };
+		CE01726422E0495600FD06A2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01726322E0495600FD06A2 /* Extensions.swift */; };
+		CE01726622E04C0700FD06A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01726522E04C0700FD06A2 /* LoginViewController.swift */; };
+		CE01726822E04C5700FD06A2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE01726722E04C5700FD06A2 /* Login.storyboard */; };
+		CE01726A22E04FD300FD06A2 /* AnimatedGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01726922E04FD300FD06A2 /* AnimatedGradient.swift */; };
+		CE01726C22E05BDC00FD06A2 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01726B22E05BDC00FD06A2 /* SignupViewController.swift */; };
 		CE042AE422D09AD100689830 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE322D09AD100689830 /* Home.storyboard */; };
 		CE042AE622D09ADE00689830 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE522D09ADE00689830 /* Search.storyboard */; };
 		CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE722D09AE800689830 /* NewPost.storyboard */; };
@@ -66,6 +71,10 @@
 		CE01725F22E03D3F00FD06A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE01726122E0486800FD06A2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		CE01726322E0495600FD06A2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CE01726522E04C0700FD06A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CE01726722E04C5700FD06A2 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		CE01726922E04FD300FD06A2 /* AnimatedGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedGradient.swift; sourceTree = "<group>"; };
+		CE01726B22E05BDC00FD06A2 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		CE042AE322D09AD100689830 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CE042AE522D09ADE00689830 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		CE042AE722D09AE800689830 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
@@ -131,6 +140,7 @@
 				CE042AE722D09AE800689830 /* NewPost.storyboard */,
 				CE042AE922D09AF300689830 /* Profile.storyboard */,
 				CE042AEB22D09AFD00689830 /* Activity.storyboard */,
+				CE01726722E04C5700FD06A2 /* Login.storyboard */,
 			);
 			path = Storybaords;
 			sourceTree = "<group>";
@@ -146,6 +156,8 @@
 				CEB3C5A622D87A6C002859FA /* NewPostPageViewController.swift */,
 				CEB3C5A822D87AC8002859FA /* PhotoLibraryViewController.swift */,
 				CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */,
+				CE01726522E04C0700FD06A2 /* LoginViewController.swift */,
+				CE01726B22E05BDC00FD06A2 /* SignupViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,8 +205,6 @@
 		E147A0832159176200AD9178 /* InstagramApp */ = {
 			isa = PBXGroup;
 			children = (
-				CE042B0B22D3430E00689830 /* CollectionLayout.swift */,
-				CEB3C5AC22D87DBD002859FA /* TabBarDelegate.swift */,
 				CE042AF822D0C7CE00689830 /* Views */,
 				E147A0842159176200AD9178 /* AppDelegate.swift */,
 				CE042AED22D09B5500689830 /* ViewControllers */,
@@ -204,9 +214,6 @@
 				E147A08D2159176400AD9178 /* LaunchScreen.storyboard */,
 				E147A0902159176400AD9178 /* Info.plist */,
 				E147A08B2159176300AD9178 /* Assets.xcassets */,
-				CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */,
-				CE01726122E0486800FD06A2 /* Helper.swift */,
-				CE01726322E0495600FD06A2 /* Extensions.swift */,
 			);
 			path = InstagramApp;
 			sourceTree = "<group>";
@@ -223,6 +230,12 @@
 		E1D28C3021629A1300DB621F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				CE01726922E04FD300FD06A2 /* AnimatedGradient.swift */,
+				CE042B0B22D3430E00689830 /* CollectionLayout.swift */,
+				CEB3C5AC22D87DBD002859FA /* TabBarDelegate.swift */,
+				CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */,
+				CE01726122E0486800FD06A2 /* Helper.swift */,
+				CE01726322E0495600FD06A2 /* Extensions.swift */,
 				CE01725F22E03D3F00FD06A2 /* GoogleService-Info.plist */,
 				E1D28C3121629A2100DB621F /* SimpleCamera */,
 			);
@@ -312,6 +325,7 @@
 			files = (
 				CE01726022E03D3F00FD06A2 /* GoogleService-Info.plist in Resources */,
 				CE042AEA22D09AF300689830 /* Profile.storyboard in Resources */,
+				CE01726822E04C5700FD06A2 /* Login.storyboard in Resources */,
 				CE01725A22DF5DA800FD06A2 /* ActivityView.xib in Resources */,
 				CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */,
 				CE042AE422D09AD100689830 /* Home.storyboard in Resources */,
@@ -377,6 +391,7 @@
 			files = (
 				CE042B0822D21B5A00689830 /* ExploreCollectionViewCell.swift in Sources */,
 				E1E440B42163F16E0034FD40 /* UserData.swift in Sources */,
+				CE01726A22E04FD300FD06A2 /* AnimatedGradient.swift in Sources */,
 				CEB3C5AD22D87DBD002859FA /* TabBarDelegate.swift in Sources */,
 				CEB3C5A922D87AC8002859FA /* PhotoLibraryViewController.swift in Sources */,
 				E1D28C3721629B5700DB621F /* SimpleCamera.swift in Sources */,
@@ -388,6 +403,7 @@
 				CEB3C5AF22D89761002859FA /* PhotoCollectionViewCell.swift in Sources */,
 				CE042B0C22D3430E00689830 /* CollectionLayout.swift in Sources */,
 				CE042AEF22D09B6500689830 /* HomeViewController.swift in Sources */,
+				CE01726622E04C0700FD06A2 /* LoginViewController.swift in Sources */,
 				CE042AFD22D0C81500689830 /* StoriesTableViewCell.swift in Sources */,
 				CEB3C5AB22D87BCB002859FA /* CameraViewController.swift in Sources */,
 				CE01725C22E0071F00FD06A2 /* ProfileHeaderTableViewCell.swift in Sources */,
@@ -397,6 +413,7 @@
 				CE042AF522D09B8400689830 /* ProfileViewController.swift in Sources */,
 				CE042AF722D09B8D00689830 /* ActivityViewController.swift in Sources */,
 				E147A0852159176200AD9178 /* AppDelegate.swift in Sources */,
+				CE01726C22E05BDC00FD06A2 /* SignupViewController.swift in Sources */,
 				E147A09B215917EB00AD9178 /* FeedData.swift in Sources */,
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
 				CE042B0122D0CB9600689830 /* StoryCollectionViewCell.swift in Sources */,
