@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		CE01725C22E0071F00FD06A2 /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01725B22E0071F00FD06A2 /* ProfileHeaderTableViewCell.swift */; };
 		CE01725E22E0380200FD06A2 /* ProfileViewStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01725D22E0380200FD06A2 /* ProfileViewStyleTableViewCell.swift */; };
 		CE01726022E03D3F00FD06A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE01725F22E03D3F00FD06A2 /* GoogleService-Info.plist */; };
+		CE01726222E0486800FD06A2 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01726122E0486800FD06A2 /* Helper.swift */; };
 		CE042AE422D09AD100689830 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE322D09AD100689830 /* Home.storyboard */; };
 		CE042AE622D09ADE00689830 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE522D09ADE00689830 /* Search.storyboard */; };
 		CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE042AE722D09AE800689830 /* NewPost.storyboard */; };
@@ -63,6 +64,8 @@
 		CE01725B22E0071F00FD06A2 /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		CE01725D22E0380200FD06A2 /* ProfileViewStyleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewStyleTableViewCell.swift; sourceTree = "<group>"; };
 		CE01725F22E03D3F00FD06A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE01726122E0486800FD06A2 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		CE01726322E0495600FD06A2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CE042AE322D09AD100689830 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CE042AE522D09ADE00689830 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		CE042AE722D09AE800689830 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				E147A0902159176400AD9178 /* Info.plist */,
 				E147A08B2159176300AD9178 /* Assets.xcassets */,
 				CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */,
+				CE01726122E0486800FD06A2 /* Helper.swift */,
+				CE01726322E0495600FD06A2 /* Extensions.swift */,
 			);
 			path = InstagramApp;
 			sourceTree = "<group>";
@@ -212,7 +217,6 @@
 				B488B618434E9D89AD83FA74 /* Pods-InstagramApp.debug.xcconfig */,
 				05CD9995D411A26AAFBF0806 /* Pods-InstagramApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -396,8 +400,10 @@
 				E147A09B215917EB00AD9178 /* FeedData.swift in Sources */,
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
 				CE042B0122D0CB9600689830 /* StoryCollectionViewCell.swift in Sources */,
+				CE01726422E0495600FD06A2 /* Extensions.swift in Sources */,
 				CE01725522DF59B300FD06A2 /* ActivityTableViewCell.swift in Sources */,
 				CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */,
+				CE01726222E0486800FD06A2 /* Helper.swift in Sources */,
 				CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
