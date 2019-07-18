@@ -10,7 +10,6 @@ import UIKit
 
 class ActivityViewController: UIViewController, UIScrollViewDelegate {
     
-    
     @IBOutlet weak var segmentedControl: CustomSegmentedControl! {
         didSet {
             segmentedControl.delegate = self
