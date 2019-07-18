@@ -27,7 +27,6 @@ class SearchViewController: UIViewController {
                     textField.textAlignment = NSTextAlignment.center
                 }
             }
-            
             searchController.dimsBackgroundDuringPresentation = false
             searchController.definesPresentationContext = true
             searchController.hidesNavigationBarDuringPresentation = false

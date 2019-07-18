@@ -28,7 +28,9 @@ class HomeViewController: UIViewController {
         tableView.register(UINib(nibName: "StoriesTableViewCell", bundle: nil), forCellReuseIdentifier: "StoriesTableViewCell")
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: rightBarItemImage, style: .plain, target: .none, action: .none)
+        self.navigationItem.rightBarButtonItem?.tintColor = .black
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: .none, action: .none)
+        self.navigationItem.leftBarButtonItem?.tintColor = .black
         
         let profileImageView = UIImageView(image: UIImage(named: "logo_nav_icon"))
         self.navigationItem.titleView = profileImageView
@@ -61,7 +63,6 @@ extension HomeViewController: UITableViewDelegate {
         cell.commentCountButton.setTitle("View all \(postData.commentCount) comments", for: .normal)
         
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

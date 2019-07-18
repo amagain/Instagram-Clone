@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="height" constant="60" id="jac-R0-0vK"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCj-r7-FyW">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCj-r7-FyW">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
                             </scrollView>
                         </subviews>

@@ -9,7 +9,7 @@
 import UIKit
 
 class ActivityViewController: UIViewController, UIScrollViewDelegate {
-
+    
     
     @IBOutlet weak var segmentedControl: CustomSegmentedControl! {
         didSet {
@@ -24,7 +24,7 @@ class ActivityViewController: UIViewController, UIScrollViewDelegate {
     
     var currentIndex: Int = 0
     lazy var slides: [ActivityView] = {
-    
+        
         let followingActivityData = FollowingActivityModel()
         let followingView = Bundle.main.loadNibNamed("ActivityView", owner: nil, options: nil)?.first as! ActivityView
         followingView.activityData = followingActivityData.followingActivity
@@ -37,11 +37,9 @@ class ActivityViewController: UIViewController, UIScrollViewDelegate {
         
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        setupSlideScrollView(slides: slides)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +51,33 @@ class ActivityViewController: UIViewController, UIScrollViewDelegate {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
+    
+    func setupSlideScrollView(slides: [ActivityView]) {
+        
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+        scrollView.isPagingEnabled = true
+        
+        for i in 0..<slides.count {
+            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
+            scrollView.addSubview(slides[i])
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageIndex = round(scrollView.contentOffset.x / view.frame.width)
+        segmentedControl.updateSegmentedControlSegs(index: Int(pageIndex))
+        currentIndex = Int(pageIndex)
+    }
+}
 
-
+extension ActivityViewController: ActivityDelegate {
+    func scrollTo(index: Int) {
+        if currentIndex == index {
+            return
+        }
+        let pageWidth: CGFloat = self.scrollView.frame.width
+        let slideToX = pageWidth * CGFloat(index)
+        self.scrollView.scrollRectToVisible(CGRect(x: slideToX, y: 0, width: pageWidth, height: self.scrollView.frame.height), animated: true)
+    }
 }

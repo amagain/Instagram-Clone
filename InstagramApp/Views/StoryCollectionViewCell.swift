@@ -21,5 +21,4 @@ class StoryCollectionViewCell: UICollectionViewCell {
         storyImage.layer.borderWidth = CGFloat(3.0)
         storyImage.contentMode = .scaleAspectFill
     }
-
 }

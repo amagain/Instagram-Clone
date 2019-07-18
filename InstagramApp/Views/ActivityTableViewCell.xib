@@ -26,7 +26,7 @@
                             <constraint firstAttribute="width" constant="60" id="QlZ-2X-7NB"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpB-Wb-uHZ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpB-Wb-uHZ">
                         <rect key="frame" x="85" y="10" width="293" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
@@ -36,10 +36,10 @@
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="VpB-Wb-uHZ" secondAttribute="trailing" constant="10" id="429-Tg-EBf"/>
                     <constraint firstItem="9fW-hQ-FvL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="DgV-UB-uIe"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="VpB-Wb-uHZ" secondAttribute="bottom" constant="10" id="EWX-5h-2Og"/>
+                    <constraint firstAttribute="bottom" secondItem="VpB-Wb-uHZ" secondAttribute="bottom" constant="47.5" id="YH0-JO-4Kl"/>
                     <constraint firstItem="9fW-hQ-FvL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gLC-xK-4wa"/>
-                    <constraint firstAttribute="bottom" secondItem="9fW-hQ-FvL" secondAttribute="bottom" constant="8.5" id="gmY-6Z-DPJ"/>
                     <constraint firstItem="VpB-Wb-uHZ" firstAttribute="leading" secondItem="9fW-hQ-FvL" secondAttribute="trailing" constant="15" id="moH-Mx-tHi"/>
+                    <constraint firstItem="VpB-Wb-uHZ" firstAttribute="top" secondItem="9fW-hQ-FvL" secondAttribute="top" id="r7K-al-K5i"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

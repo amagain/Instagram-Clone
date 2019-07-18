@@ -38,7 +38,8 @@ class CustomSegmentedControl: UIView {
         for buttonTitle in buttonTitles {
             let button = UIButton.init(type: .system)
             button.setTitle(buttonTitle, for: .normal)
-            //            button.addTarget(self, action: #selector(), for: .touchUpInside)
+            button.setTitleColor(textColor, for: .normal)
+            button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
             buttons.append(button)
         }
         buttons[0].setTitleColor(selectorTextColor, for: .normal)
