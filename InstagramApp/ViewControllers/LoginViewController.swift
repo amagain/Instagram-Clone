@@ -88,7 +88,7 @@ class LoginViewController: UIViewController {
             }
             if error == nil {
                 DispatchQueue.main.async {
-                    //login
+                    Helper.login()
                 }
             }
             else if let error = error {

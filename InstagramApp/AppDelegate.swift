@@ -8,9 +8,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let tabBarDelegate = TabBarDelegate()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         FirebaseApp.configure()
-        setupTabBarController()
+        if let _ = Auth.auth().currentUser {
+            setupTabBarController()
+        } else {
+            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            window?.rootViewController = loginViewController
+        }
         return true
     }
     
