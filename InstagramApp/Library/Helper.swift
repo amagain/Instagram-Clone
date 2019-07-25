@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import Firebase
 import UIKit
+import FirebaseAuth
 
 class Helper {
     
@@ -57,7 +57,7 @@ class Helper {
         }
         tabBarController.viewControllers = viewControllers
         tabBarController.tabBar.isTranslucent = false
-        tabBarController.delegate = TabBarDelegate()
+        tabBarController.delegate = tabBarDelegate
         
         if let items = tabBarController.tabBar.items {
             for item in items {
@@ -77,11 +77,17 @@ class Helper {
     }
     
     class func logout() {
-        let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
-        let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        guard let window = appDelegate.window else { return }
-        window.rootViewController = loginViewController
+        do {
+            try Auth.auth().signOut()
+            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let loginViewController = loginStoryboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            guard let window = appDelegate.window else { return }
+            window.rootViewController = loginViewController
+            
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
 }
 

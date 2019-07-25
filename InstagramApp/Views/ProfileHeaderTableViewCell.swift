@@ -45,7 +45,7 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         }
     }
     func logout() {
-        print("logout")
+        Helper.logout()
     }
     func follow() {
         print("follow")

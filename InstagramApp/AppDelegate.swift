@@ -1,11 +1,12 @@
 import UIKit
 import Firebase
 
+let tabBarDelegate = TabBarDelegate()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let tabBarDelegate = TabBarDelegate()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
