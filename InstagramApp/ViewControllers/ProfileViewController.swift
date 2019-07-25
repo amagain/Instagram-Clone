@@ -5,6 +5,7 @@ import FirebaseAuth
 enum ProfileType {
     case personal, otherUser
 }
+
 class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -13,6 +14,24 @@ class ProfileViewController: UIViewController {
     var user: UserModel?
     private let imagePicker = UIImagePickerController()
     
+    lazy var progressIndicator: UIProgressView = {
+        let _progressIndicator = UIProgressView()
+        _progressIndicator.trackTintColor = UIColor.lightGray
+        _progressIndicator.progressTintColor = UIColor.black
+        _progressIndicator.progress = Float(0)
+        _progressIndicator.translatesAutoresizingMaskIntoConstraints = false
+        return _progressIndicator
+    }()
+    
+    lazy var cancelButton: UIButton = {
+        let _cancelButton = UIButton()
+        _cancelButton.setTitle("Cancel Upload", for: .normal)
+        _cancelButton.setTitleColor(UIColor.black, for: .normal)
+        _cancelButton.addTarget(self, action: #selector(cancelUpload), for: .touchUpInside)
+        _cancelButton.translatesAutoresizingMaskIntoConstraints = false
+        return _cancelButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -20,7 +39,21 @@ class ProfileViewController: UIViewController {
         tableView.register(UINib(nibName: "FeedTableViewCell", bundle: nil), forCellReuseIdentifier: "FeedTableViewCell")
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
+        view.addSubview(progressIndicator)
+        view.addSubview(cancelButton)
+        let constraints: [NSLayoutConstraint] = [
+            progressIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            progressIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
+            progressIndicator.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            progressIndicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            cancelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            cancelButton.topAnchor.constraint(equalTo: progressIndicator.bottomAnchor, constant: 5)
+        ]
+        NSLayoutConstraint.activate(constraints)
+        progressIndicator.isHidden = true
+        cancelButton.isHidden = true
         loadData()
+        
     }
     
     func loadData() {
@@ -36,6 +69,10 @@ class ProfileViewController: UIViewController {
                 strongSelf.tableView.reloadData()
             }
         }
+    }
+    
+    @objc func cancelUpload() {
+        //TODO: - Implement
     }
 }
 extension ProfileViewController: UITableViewDataSource {
@@ -97,7 +134,6 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
                 if let imageData = resizedImage.jpegData(compressionQuality: 0.75) {
                     // upload to firebase
                 }
-                
             }
         }
     }
