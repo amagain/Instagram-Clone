@@ -46,6 +46,7 @@
 		CEB3C5AB22D87BCB002859FA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */; };
 		CEB3C5AD22D87DBD002859FA /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5AC22D87DBD002859FA /* TabBarDelegate.swift */; };
 		CEB3C5AF22D89761002859FA /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5AE22D89761002859FA /* PhotoCollectionViewCell.swift */; };
+		CEF528B122EA2D3900FD9480 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF528B022EA2D3900FD9480 /* Protocol.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -99,6 +100,7 @@
 		CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CEB3C5AC22D87DBD002859FA /* TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
 		CEB3C5AE22D89761002859FA /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEF528B022EA2D3900FD9480 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				CE01725122DF531F00FD06A2 /* CustomSegmentedControl.swift */,
 				CE01726122E0486800FD06A2 /* Helper.swift */,
 				CE01726322E0495600FD06A2 /* Extensions.swift */,
+				CEF528B022EA2D3900FD9480 /* Protocol.swift */,
 				CE01725F22E03D3F00FD06A2 /* GoogleService-Info.plist */,
 				E1D28C3121629A2100DB621F /* SimpleCamera */,
 			);
@@ -420,6 +423,7 @@
 				CE01726422E0495600FD06A2 /* Extensions.swift in Sources */,
 				CE01725522DF59B300FD06A2 /* ActivityTableViewCell.swift in Sources */,
 				CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */,
+				CEF528B122EA2D3900FD9480 /* Protocol.swift in Sources */,
 				CE01726222E0486800FD06A2 /* Helper.swift in Sources */,
 				CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */,
 			);

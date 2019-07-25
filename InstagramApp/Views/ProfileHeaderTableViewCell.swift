@@ -18,12 +18,16 @@ class ProfileHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfFollowingLabel: UILabel!
     
     var profileType: ProfileType = .personal
+    weak var delegate: ProfileHeaderDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         profileButton.layer.borderWidth = CGFloat(0.5)
         profileButton.layer.borderColor = UIColor(red: 0.61, green: 0.61, blue: 0.61, alpha: 1.0).cgColor
         profileButton.layer.cornerRadius = CGFloat(3.0)
+        //tap gesture on the profileImage
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageDidTouch))
+        profileImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     override func layoutSubviews() {
@@ -32,7 +36,6 @@ class ProfileHeaderTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
     
     @IBAction func profileActionButtonDidTouch(_ sender: Any) {
@@ -41,8 +44,11 @@ class ProfileHeaderTableViewCell: UITableViewCell {
             logout()
         case .otherUser:
             follow()
-            
         }
+    }
+    
+    @objc func profileImageDidTouch() {
+        delegate?.profileImageDidTouch()
     }
     func logout() {
         Helper.logout()

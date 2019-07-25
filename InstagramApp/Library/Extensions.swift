@@ -30,3 +30,19 @@ extension UIViewController {
         }
     }
 }
+
+extension UIImage {
+    func resized(toWidth width: CGFloat) -> UIImage? {
+        if self.size.width <= width {
+            return self
+        }
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil((width * size.height) / size.width)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
+}
