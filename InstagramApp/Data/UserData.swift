@@ -8,12 +8,12 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 
 struct User {
     
     var name: String
     var profileImage: UIImage
-    
 }
 
 class UsersModel {
@@ -35,11 +35,17 @@ class UserModel {
     }
     var username: String = ""
     var bio: String = ""
+    var profileImage: StorageReference?
+    
     init?(_ snapshot: DataSnapshot){
         guard let value = snapshot.value as? [String: Any] else { return nil }
         print(value)
         self.username = value["username"] as? String ?? "Failed"
         self.bio = value["bio"] as? String ?? "Failed"
+        if let profileImage = value["profileImage"] as? String,
+            let userId = Auth.auth().currentUser?.uid {
+            self.profileImage = Storage.storage().reference(withPath: "images/\(userId)/\(profileImage)")
+        }
     }
 }
 

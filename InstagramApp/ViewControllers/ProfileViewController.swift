@@ -1,6 +1,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 
 enum ProfileType {
     case personal, otherUser
@@ -31,6 +32,10 @@ class ProfileViewController: UIViewController {
         _cancelButton.translatesAutoresizingMaskIntoConstraints = false
         return _cancelButton
     }()
+    
+    var uploadTask: StorageUploadTask?
+        
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +76,49 @@ class ProfileViewController: UIViewController {
         }
     }
     
+    func uploadImage(data: Data) {
+        if let user = Auth.auth().currentUser {
+            progressIndicator.isHidden = false
+            cancelButton.isHidden = false
+            progressIndicator.progress = Float(0)
+            
+            let imageId: String = UUID().uuidString.lowercased().replacingOccurrences(of: "-", with: "_")
+            let imageName = "\(imageId).jpg"
+            let pathToPicture = "images/\(user.uid)/\(imageName)"
+            let storageRef = Storage.storage().reference(withPath: pathToPicture)
+            let metaData = StorageMetadata()
+            metaData.contentType = "image/jpg"
+            uploadTask = storageRef.putData(data, metadata: metaData, completion: { [weak self] (metaData, error) in
+                guard let strongSelf = self else { return }
+                DispatchQueue.main.async {
+                    strongSelf.progressIndicator.isHidden = true
+                    strongSelf.cancelButton.isHidden = true
+                }
+                if let error = error {
+                    print(error.localizedDescription)
+                    let alert = Helper.errorAlert(title: "Upload Error", message: "There was a problem uploading the image")
+                    DispatchQueue.main.async {
+                        strongSelf.present(alert, animated: true, completion: nil)
+                    }
+                }
+                else {
+                    UserModel.collection.child(user.uid).updateChildValues(["profileImage": imageName])
+                }
+            })
+            uploadTask?.observe(.progress) { [weak self] (snapshot) in
+                guard let strongSelf = self else { return }
+                let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount) / Double(snapshot.progress!.totalUnitCount)
+                DispatchQueue.main.async {
+                    strongSelf.progressIndicator.setProgress(Float(percentComplete), animated: true)
+                }
+            }
+        }
+    }
+    
     @objc func cancelUpload() {
-        //TODO: - Implement
+        progressIndicator.isHidden = true
+        cancelButton.isHidden = true
+        uploadTask?.cancel()
     }
 }
 extension ProfileViewController: UITableViewDataSource {
@@ -132,7 +178,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             if let resizedImage = pickedImage.resized(toWidth: 1080) {
                 if let imageData = resizedImage.jpegData(compressionQuality: 0.75) {
-                    // upload to firebase
+                    uploadImage(data: imageData)
                 }
             }
         }

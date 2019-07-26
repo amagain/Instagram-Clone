@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol ActivityDelegate: class {
-    func scrollTo(index: Int)
-}
+//protocol ActivityDelegate: class {
+//    func scrollTo(index: Int)
+//}
 
 class CustomSegmentedControl: UIView {
     
