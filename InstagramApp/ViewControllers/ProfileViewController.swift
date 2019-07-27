@@ -2,6 +2,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 import FirebaseStorage
+import SDWebImage
 
 enum ProfileType {
     case personal, otherUser
@@ -34,8 +35,6 @@ class ProfileViewController: UIViewController {
     }()
     
     var uploadTask: StorageUploadTask?
-        
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +56,8 @@ class ProfileViewController: UIViewController {
         NSLayoutConstraint.activate(constraints)
         progressIndicator.isHidden = true
         cancelButton.isHidden = true
+        imagePicker.delegate = self
         loadData()
-        
     }
     
     func loadData() {
@@ -102,7 +101,19 @@ class ProfileViewController: UIViewController {
                     }
                 }
                 else {
-                    UserModel.collection.child(user.uid).updateChildValues(["profileImage": imageName])
+                    storageRef.downloadURL(completion: {(url, error) in
+                        if let url = url,
+                            error == nil {
+                            UserModel.collection.child(user.uid).updateChildValues(["profileImage": url.absoluteString])
+                        }
+                        else {
+                            let alert = Helper.errorAlert(title: "Upload Error", message: "There was a problem downloading the image")
+                            DispatchQueue.main.async {
+                                strongSelf.present(alert, animated: true, completion: nil)
+                            }
+                        }
+                    })
+                    
                 }
             })
             uploadTask?.observe(.progress) { [weak self] (snapshot) in
@@ -147,8 +158,11 @@ extension ProfileViewController: UITableViewDelegate {
             profileHeaderTableViewCell.delegate = self
             
             if let user = user {
-                print(user)
                 profileHeaderTableViewCell.nameLabel.text = user.username
+                if let profileImage = user.profileImage {
+                    profileHeaderTableViewCell.profileImageView.sd_cancelCurrentImageLoad()
+                    profileHeaderTableViewCell.profileImageView.sd_setImage(with: profileImage, completed: nil)
+                }
             }
             switch profileType {
             case .otherUser:
@@ -174,7 +188,7 @@ extension ProfileViewController: UITableViewDelegate {
     }
 }
 extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             if let resizedImage = pickedImage.resized(toWidth: 1080) {
                 if let imageData = resizedImage.jpegData(compressionQuality: 0.75) {
@@ -182,6 +196,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
                 }
             }
         }
+        dismiss(animated: true, completion: nil)
     }
 }
 extension ProfileViewController: ProfileHeaderDelegate {

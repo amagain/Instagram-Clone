@@ -28,6 +28,8 @@ class ProfileHeaderTableViewCell: UITableViewCell {
         //tap gesture on the profileImage
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageDidTouch))
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.clipsToBounds = true
     }
     
     override func layoutSubviews() {
