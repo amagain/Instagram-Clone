@@ -58,9 +58,6 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAz-IQ-GSO">
                                 <rect key="frame" x="0.0" y="44" width="414" height="787"/>
-                                <connections>
-                                    <segue destination="Ypy-BD-aSW" kind="embed" id="ncf-ZP-9Mc"/>
-                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,6 +193,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULo-C0-wzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2481" y="50"/>
+        </scene>
+        <!--Create Post View Controller-->
+        <scene sceneID="GYu-Dv-xDL">
+            <objects>
+                <viewController storyboardIdentifier="CreatePost" id="K1p-4B-iIY" customClass="CreatePostViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4gn-C7-ftJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nHI-vg-l0c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OM7-yk-ZpJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nc8-HU-HZb">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Nc8-HU-HZb" secondAttribute="height" multiplier="1:1" id="BZm-am-0x2"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-Um-6PC">
+                                                <rect key="frame" x="10" y="424" width="394" height="100"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="2gn-qC-r0r"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-AD-acW">
+                                                <rect key="frame" x="20" y="743" width="374" height="45"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="FyZ-QI-TGb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <state key="normal" title="Post">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="postButtonDidTouchWith_sender:" destination="K1p-4B-iIY" eventType="touchUpInside" id="cQp-kp-NDw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="UUE-AD-acW" secondAttribute="bottom" constant="30" id="1dX-5I-zju"/>
+                                            <constraint firstItem="UUE-AD-acW" firstAttribute="leading" secondItem="OM7-yk-ZpJ" secondAttribute="leading" constant="20" id="5pD-Cn-ywR"/>
+                                            <constraint firstAttribute="trailing" secondItem="UUE-AD-acW" secondAttribute="trailing" constant="20" id="Pd1-xt-EjL"/>
+                                            <constraint firstItem="Dcb-Um-6PC" firstAttribute="leading" secondItem="OM7-yk-ZpJ" secondAttribute="leading" constant="10" id="Yxs-Il-pax"/>
+                                            <constraint firstAttribute="trailing" secondItem="Nc8-HU-HZb" secondAttribute="trailing" id="f1m-b8-Dfa"/>
+                                            <constraint firstItem="Nc8-HU-HZb" firstAttribute="leading" secondItem="OM7-yk-ZpJ" secondAttribute="leading" id="kLj-77-FBY"/>
+                                            <constraint firstItem="Nc8-HU-HZb" firstAttribute="top" secondItem="OM7-yk-ZpJ" secondAttribute="top" id="nJo-GL-BXE"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dcb-Um-6PC" secondAttribute="trailing" constant="10" id="v2T-zH-D2i"/>
+                                            <constraint firstItem="Dcb-Um-6PC" firstAttribute="top" secondItem="Nc8-HU-HZb" secondAttribute="bottom" constant="10" id="zBH-2a-OpO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OM7-yk-ZpJ" firstAttribute="height" secondItem="nHI-vg-l0c" secondAttribute="height" id="Mje-4T-KLH"/>
+                                    <constraint firstItem="OM7-yk-ZpJ" firstAttribute="width" secondItem="nHI-vg-l0c" secondAttribute="width" id="OIP-i6-F2s"/>
+                                    <constraint firstItem="OM7-yk-ZpJ" firstAttribute="leading" secondItem="nHI-vg-l0c" secondAttribute="leading" id="jgS-lO-Jqf"/>
+                                    <constraint firstAttribute="bottom" secondItem="OM7-yk-ZpJ" secondAttribute="bottom" id="kPQ-cn-ogt"/>
+                                    <constraint firstItem="OM7-yk-ZpJ" firstAttribute="top" secondItem="nHI-vg-l0c" secondAttribute="top" id="miK-ER-6hB"/>
+                                    <constraint firstAttribute="trailing" secondItem="OM7-yk-ZpJ" secondAttribute="trailing" id="sCr-8e-2dO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x8W-iw-g51" firstAttribute="trailing" secondItem="nHI-vg-l0c" secondAttribute="trailing" id="0T4-7v-1fa"/>
+                            <constraint firstItem="nHI-vg-l0c" firstAttribute="leading" secondItem="x8W-iw-g51" secondAttribute="leading" id="JT4-oJ-Y3q"/>
+                            <constraint firstItem="x8W-iw-g51" firstAttribute="bottom" secondItem="nHI-vg-l0c" secondAttribute="bottom" id="Jp0-tw-U1m"/>
+                            <constraint firstItem="nHI-vg-l0c" firstAttribute="top" secondItem="x8W-iw-g51" secondAttribute="top" id="NGf-Vg-EOB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x8W-iw-g51"/>
+                    </view>
+                    <connections>
+                        <outlet property="postCaptionTextView" destination="Dcb-Um-6PC" id="YQn-Kt-a2h"/>
+                        <outlet property="postImageView" destination="Nc8-HU-HZb" id="9Kq-6q-p78"/>
+                        <outlet property="scrollView" destination="nHI-vg-l0c" id="WNt-Rw-xbm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovc-OK-xvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="815"/>
         </scene>
     </scenes>
     <resources>

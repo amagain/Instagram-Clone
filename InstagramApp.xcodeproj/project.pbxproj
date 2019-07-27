@@ -41,6 +41,8 @@
 		CE042B0822D21B5A00689830 /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */; };
 		CE042B0A22D314D600689830 /* SearchBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0922D314D600689830 /* SearchBarContainerView.swift */; };
 		CE042B0C22D3430E00689830 /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0B22D3430E00689830 /* CollectionLayout.swift */; };
+		CE3049A122EC469F0095889B /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3049A022EC469F0095889B /* CreatePostViewController.swift */; };
+		CE3049A322EC4E020095889B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3049A222EC4E020095889B /* PostViewController.swift */; };
 		CEB3C5A722D87A6C002859FA /* NewPostPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5A622D87A6C002859FA /* NewPostPageViewController.swift */; };
 		CEB3C5A922D87AC8002859FA /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5A822D87AC8002859FA /* PhotoLibraryViewController.swift */; };
 		CEB3C5AB22D87BCB002859FA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */; };
@@ -95,6 +97,8 @@
 		CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE042B0922D314D600689830 /* SearchBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerView.swift; sourceTree = "<group>"; };
 		CE042B0B22D3430E00689830 /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
+		CE3049A022EC469F0095889B /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		CE3049A222EC4E020095889B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		CEB3C5A622D87A6C002859FA /* NewPostPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPageViewController.swift; sourceTree = "<group>"; };
 		CEB3C5A822D87AC8002859FA /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */,
 				CE01726522E04C0700FD06A2 /* LoginViewController.swift */,
 				CE01726B22E05BDC00FD06A2 /* SignupViewController.swift */,
+				CE3049A022EC469F0095889B /* CreatePostViewController.swift */,
+				CE3049A222EC4E020095889B /* PostViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3049A322EC4E020095889B /* PostViewController.swift in Sources */,
 				CE042B0822D21B5A00689830 /* ExploreCollectionViewCell.swift in Sources */,
 				E1E440B42163F16E0034FD40 /* UserData.swift in Sources */,
 				CE01726A22E04FD300FD06A2 /* AnimatedGradient.swift in Sources */,
@@ -407,6 +414,7 @@
 				CE042B0C22D3430E00689830 /* CollectionLayout.swift in Sources */,
 				CE042AEF22D09B6500689830 /* HomeViewController.swift in Sources */,
 				CE01726622E04C0700FD06A2 /* LoginViewController.swift in Sources */,
+				CE3049A122EC469F0095889B /* CreatePostViewController.swift in Sources */,
 				CE042AFD22D0C81500689830 /* StoriesTableViewCell.swift in Sources */,
 				CEB3C5AB22D87BCB002859FA /* CameraViewController.swift in Sources */,
 				CE01725C22E0071F00FD06A2 /* ProfileHeaderTableViewCell.swift in Sources */,
