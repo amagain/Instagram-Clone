@@ -43,6 +43,11 @@
 		CE042B0C22D3430E00689830 /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE042B0B22D3430E00689830 /* CollectionLayout.swift */; };
 		CE3049A122EC469F0095889B /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3049A022EC469F0095889B /* CreatePostViewController.swift */; };
 		CE3049A322EC4E020095889B /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3049A222EC4E020095889B /* PostViewController.swift */; };
+		CE7E0A6522F26DB60064EB18 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7E0A6322F26DB50064EB18 /* PostTableViewCell.xib */; };
+		CE7E0A6622F26DB60064EB18 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E0A6422F26DB50064EB18 /* PostTableViewCell.swift */; };
+		CE7E0A6922F26DC50064EB18 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7E0A6722F26DC50064EB18 /* CommentTableViewCell.swift */; };
+		CE7E0A6A22F26DC50064EB18 /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE7E0A6822F26DC50064EB18 /* CommentTableViewCell.xib */; };
+		CE7E0A6C22F27D570064EB18 /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7E0A6B22F27D570064EB18 /* Post.storyboard */; };
 		CEB3C5A722D87A6C002859FA /* NewPostPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5A622D87A6C002859FA /* NewPostPageViewController.swift */; };
 		CEB3C5A922D87AC8002859FA /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5A822D87AC8002859FA /* PhotoLibraryViewController.swift */; };
 		CEB3C5AB22D87BCB002859FA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */; };
@@ -99,6 +104,11 @@
 		CE042B0B22D3430E00689830 /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
 		CE3049A022EC469F0095889B /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		CE3049A222EC4E020095889B /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		CE7E0A6322F26DB50064EB18 /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		CE7E0A6422F26DB50064EB18 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		CE7E0A6722F26DC50064EB18 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		CE7E0A6822F26DC50064EB18 /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		CE7E0A6B22F27D570064EB18 /* Post.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		CEB3C5A622D87A6C002859FA /* NewPostPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostPageViewController.swift; sourceTree = "<group>"; };
 		CEB3C5A822D87AC8002859FA /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		CEB3C5AA22D87BCB002859FA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +157,7 @@
 				CE042AE922D09AF300689830 /* Profile.storyboard */,
 				CE042AEB22D09AFD00689830 /* Activity.storyboard */,
 				CE01726722E04C5700FD06A2 /* Login.storyboard */,
+				CE7E0A6B22F27D570064EB18 /* Post.storyboard */,
 			);
 			path = Storybaords;
 			sourceTree = "<group>";
@@ -173,6 +184,8 @@
 		CE042AF822D0C7CE00689830 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE7E0A6722F26DC50064EB18 /* CommentTableViewCell.swift */,
+				CE7E0A6822F26DC50064EB18 /* CommentTableViewCell.xib */,
 				CE042AFB22D0C81500689830 /* StoriesTableViewCell.swift */,
 				CE042AFC22D0C81500689830 /* StoriesTableViewCell.xib */,
 				CE042AFF22D0CB9600689830 /* StoryCollectionViewCell.swift */,
@@ -182,6 +195,8 @@
 				CE042B0722D21B5A00689830 /* ExploreCollectionViewCell.swift */,
 				CE042B0922D314D600689830 /* SearchBarContainerView.swift */,
 				CEB3C5AE22D89761002859FA /* PhotoCollectionViewCell.swift */,
+				CE7E0A6422F26DB50064EB18 /* PostTableViewCell.swift */,
+				CE7E0A6322F26DB50064EB18 /* PostTableViewCell.xib */,
 				CE01725322DF59B300FD06A2 /* ActivityTableViewCell.swift */,
 				CE01725422DF59B300FD06A2 /* ActivityTableViewCell.xib */,
 				CE01725722DF5D9B00FD06A2 /* ActivityView.swift */,
@@ -338,6 +353,7 @@
 				CE01725A22DF5DA800FD06A2 /* ActivityView.xib in Resources */,
 				CE042AE822D09AE800689830 /* NewPost.storyboard in Resources */,
 				CE042AE422D09AD100689830 /* Home.storyboard in Resources */,
+				CE7E0A6522F26DB60064EB18 /* PostTableViewCell.xib in Resources */,
 				CE042B0622D1E29B00689830 /* FeedTableViewCell.xib in Resources */,
 				E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */,
 				CE042B0222D0CB9600689830 /* StoryCollectionViewCell.xib in Resources */,
@@ -346,6 +362,8 @@
 				CE01725622DF59B300FD06A2 /* ActivityTableViewCell.xib in Resources */,
 				CE042AE622D09ADE00689830 /* Search.storyboard in Resources */,
 				E147A08C2159176300AD9178 /* Assets.xcassets in Resources */,
+				CE7E0A6C22F27D570064EB18 /* Post.storyboard in Resources */,
+				CE7E0A6A22F26DC50064EB18 /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +420,7 @@
 				CE042B0822D21B5A00689830 /* ExploreCollectionViewCell.swift in Sources */,
 				E1E440B42163F16E0034FD40 /* UserData.swift in Sources */,
 				CE01726A22E04FD300FD06A2 /* AnimatedGradient.swift in Sources */,
+				CE7E0A6622F26DB60064EB18 /* PostTableViewCell.swift in Sources */,
 				CEB3C5AD22D87DBD002859FA /* TabBarDelegate.swift in Sources */,
 				CEB3C5A922D87AC8002859FA /* PhotoLibraryViewController.swift in Sources */,
 				E1D28C3721629B5700DB621F /* SimpleCamera.swift in Sources */,
@@ -432,6 +451,7 @@
 				CE01725522DF59B300FD06A2 /* ActivityTableViewCell.swift in Sources */,
 				CE042AF322D09B7B00689830 /* NewPostViewController.swift in Sources */,
 				CEF528B122EA2D3900FD9480 /* Protocol.swift in Sources */,
+				CE7E0A6922F26DC50064EB18 /* CommentTableViewCell.swift in Sources */,
 				CE01726222E0486800FD06A2 /* Helper.swift in Sources */,
 				CE01725222DF531F00FD06A2 /* CustomSegmentedControl.swift in Sources */,
 			);

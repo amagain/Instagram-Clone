@@ -72,10 +72,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="o8e-U0-w7H"/>
                     </view>
+                    <connections>
+                        <segue destination="K1p-4B-iIY" kind="show" identifier="CreatePost" id="owi-qU-UZC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uev-SC-ODj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="189.85507246376812" y="35.491071428571423"/>
+            <point key="canvasLocation" x="0.0" y="-2"/>
         </scene>
         <!--New Post Page View Controller-->
         <scene sceneID="AkW-ag-TkC">
@@ -83,7 +86,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Ypy-BD-aSW" customClass="NewPostPageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2t-xN-fFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949" y="34"/>
+            <point key="canvasLocation" x="890" y="-2"/>
         </scene>
         <!--Photo Library View Controller-->
         <scene sceneID="Ng4-EY-hDZ">
@@ -147,7 +150,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLk-vc-xfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644.9275362318842" y="49.553571428571423"/>
+            <point key="canvasLocation" x="1645" y="-2"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="RYa-kW-QIK">
@@ -192,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULo-C0-wzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2481" y="50"/>
+            <point key="canvasLocation" x="2481" y="-2"/>
         </scene>
         <!--Create Post View Controller-->
         <scene sceneID="GYu-Dv-xDL">

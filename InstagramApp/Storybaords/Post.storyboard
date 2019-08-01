@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Post View Controller-->
+        <scene sceneID="eja-TV-tUL">
+            <objects>
+                <viewController storyboardIdentifier="Post" id="LYs-rU-c9u" customClass="PostViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Db-wL-lgL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v4q-nc-dW2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3a-QK-szq">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="orv-Vs-mdn">
+                                        <rect key="frame" x="10" y="10" width="336" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <attributedString key="attributedText"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yi6-qt-K06">
+                                        <rect key="frame" x="356" y="7.5" width="50" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Ski-46-ve4"/>
+                                            <constraint firstAttribute="width" constant="50" id="kwW-jg-pO9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Post">
+                                            <color key="titleColor" red="0.1529411765" green="0.23529411759999999" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="postCommenButtonDidTouch:" destination="LYs-rU-c9u" eventType="touchUpInside" id="vZY-Qi-5ek"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="orv-Vs-mdn" firstAttribute="leading" secondItem="G3a-QK-szq" secondAttribute="leading" constant="10" id="aZU-0o-vHt"/>
+                                    <constraint firstItem="orv-Vs-mdn" firstAttribute="top" secondItem="G3a-QK-szq" secondAttribute="top" constant="10" id="bMx-A8-911"/>
+                                    <constraint firstItem="yi6-qt-K06" firstAttribute="centerY" secondItem="orv-Vs-mdn" secondAttribute="centerY" id="bq4-dZ-bXx"/>
+                                    <constraint firstItem="yi6-qt-K06" firstAttribute="leading" secondItem="orv-Vs-mdn" secondAttribute="trailing" constant="10" id="jHO-WM-cft"/>
+                                    <constraint firstAttribute="bottom" secondItem="orv-Vs-mdn" secondAttribute="bottom" constant="10" id="v7R-qA-ZPU"/>
+                                    <constraint firstAttribute="trailing" secondItem="yi6-qt-K06" secondAttribute="trailing" constant="8" id="vD9-k0-XAV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="v4q-nc-dW2" firstAttribute="trailing" secondItem="Zp4-tH-h5O" secondAttribute="trailing" id="0K4-2o-TJx"/>
+                            <constraint firstItem="G3a-QK-szq" firstAttribute="top" secondItem="v4q-nc-dW2" secondAttribute="bottom" id="IdF-Ft-LfV"/>
+                            <constraint firstItem="G3a-QK-szq" firstAttribute="leading" secondItem="Zp4-tH-h5O" secondAttribute="leading" id="P4l-SZ-7KE"/>
+                            <constraint firstItem="v4q-nc-dW2" firstAttribute="leading" secondItem="Zp4-tH-h5O" secondAttribute="leading" id="Pvn-DF-EbP"/>
+                            <constraint firstItem="G3a-QK-szq" firstAttribute="trailing" secondItem="Zp4-tH-h5O" secondAttribute="trailing" id="aki-Mq-NsZ"/>
+                            <constraint firstItem="G3a-QK-szq" firstAttribute="bottom" secondItem="Zp4-tH-h5O" secondAttribute="bottom" id="bFW-wU-noN"/>
+                            <constraint firstItem="v4q-nc-dW2" firstAttribute="top" secondItem="Zp4-tH-h5O" secondAttribute="top" id="jLP-JE-7Sz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zp4-tH-h5O"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentTextView" destination="orv-Vs-mdn" id="7AS-qm-NGN"/>
+                        <outlet property="keyboardConstraints" destination="v4q-nc-dW2" id="wP6-4A-3km"/>
+                        <outlet property="tableView" destination="v4q-nc-dW2" id="9kB-GX-zJo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CE-kU-Df2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135809" y="-28"/>
+        </scene>
+    </scenes>
+</document>

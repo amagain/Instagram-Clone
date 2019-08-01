@@ -60,8 +60,7 @@ extension HomeViewController: UITableViewDelegate {
         cell.likesCountLabel.text = "\(postData.likesCount) likes"
         cell.postCommentLabel.text = postData.postComment
         cell.usernameTItleButton.setTitle(postData.user.name, for: .normal)
-        cell.commentCountButton.setTitle("View all \(postData.commentCount) comments", for: .normal)
-        
+        cell.commentCountButton.setTitle("View all \(postData.comments.count) comments", for: .normal)
         return cell
     }
     

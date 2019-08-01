@@ -23,8 +23,7 @@ class NewPostViewController: UIViewController {
         
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonPressed))
-        NotificationCenter.default.addObserver(self, selector: #selector(NewPostViewController.moveToCreatePost(notification:)), name: NSNotification.Name(rawValue: "createNewPost"), object: nil)
-        
+  //      NotificationCenter.default.addObserver(self, selector: #selector(NewPostViewController.moveToCreatePost(notification:)), name: NSNotification.Name(rawValue: "createNewPost"), object: nil)
     }
     
     override var prefersStatusBarHidden: Bool {

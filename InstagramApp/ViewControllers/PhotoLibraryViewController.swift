@@ -83,8 +83,8 @@ extension PhotoLibraryViewController: UICollectionViewDelegateFlowLayout {
             if !isDegradedImage {
                 if let image = image {
                     print(image)
-                    NotificationCenter.default.post(name: NSNotification.Name("createPost"), object: image)
-                    self?.dismiss(animated: true, completion: nil)
+//                    NotificationCenter.default.post(name: NSNotification.Name("createPost"), object: image)
+//                    self?.dismiss(animated: true, completion: nil)
                 }
             }
             

@@ -12,6 +12,7 @@ class CameraViewController: UIViewController {
     
     @IBOutlet weak var simpleCameraView: SimpleCameraView!
     var simpleCamera: SimpleCamera!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         simpleCamera = SimpleCamera(cameraView: simpleCameraView)
